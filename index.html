@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby</title>
+
+    <style>
+        body {
+            background: radial-gradient(848px at 10% 20%, rgba(174, 231, 165, 0.9) 0%, rgb(181, 205, 154) 90%);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid white;
+            font-size: 24px;
+            border-radius: 10px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+        }
+        button:hover {
+            background: white;
+            cursor: pointer;
+            color: darkseagreen;
+            border-color: darkseagreen;
+        }
+
+        .book {
+            color: white;
+            background: radial-gradient(848px at 10% 20%, rgba(174, 231, 165, 0.9) 0%, rgb(181, 205, 154) 90%);
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+
+        footer {
+            text-align: center;
+            margin: 1opx 0;
+            font-size: 16px;
+        }
+
+        .theme-button {
+            font-size: 14px;
+            background:black;
+            color:white;
+            margin: 10px auto;
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.5;
+        }
+        .reading-picture {
+            border-radius: 10px;
+            transition: transform 150ms ease-in-out;
+        }
+        .reading-picture:hover {
+            filter: contrast(80%);
+            transform: scale(1.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 10px;
+            transition: transform 150ms ease-in-out;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .grid:hover {
+            filter: contrast(80%);
+        }
+
+        .dark {
+            background: black;
+            color: black;
+        }
+
+        .dark .container {
+            background: gray;
+        }
+
+        .dark .book {
+            background:black;
+            color:white;
+        }
+
+        .dark .book:hover {
+            background: white;
+            cursor: pointer;
+            color: black;
+            border-color: black;
+        }
+
+        .dark footer {
+            color: white;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <button class="theme-button">Change Theme</button>
+    <div class ="container">
+    <h1> Reading </h1>
+
+    <h2> The Philosophy of Reading </h2>
+    <a href="https://fee.org/articles/the-philosophy-of-reading/" target="_blank">
+    <img src="https://external-preview.redd.it/75VEowoUu3-U-GlAQfWfuk4P10_ae1rSmIdlRWuPE4o.jpg?auto=webp&s=a0eaf426b20741a709e3e9ea80bbc0635de47ae4" alt="" class="reading-picture">
+    </a>
+    <div class="grid">
+    <img src="https://64.media.tumblr.com/tumblr_m9wznx4v6W1rn7vaao1_400.png" alt="">
+       
+    <img src="https://i.pinimg.com/550x/48/2c/3a/482c3aca2fd5e40e80fd163f000f82ae.jpg" alt="">
+    
+    <img src="https://64.media.tumblr.com/89f8cac42ac1258258a21a2a0883f7e2/tumblr_nq26r4wXxc1uvk1qio1_400.jpg" alt="">
+
+    </div>
+    <p>
+        Reading is the active and cognitive process of making meaning from print. The goal of reading is to comprehend and apply what is read to real-world experiences. The acquisition of reading skills and strategies is developmental and influenced by students' individual experiences and their motivation.
+    </p>
+    <p>
+        <a href="https://en.wikipedia.org/wiki/Reading" target="_blank">
+            <strong>Read more on Wikipedia</strong>
+        </a>
+    </p>
+    <button class="book">Find your new favorite book</button>
+    </div>
+
+    <footer>Coded by Kristin Jones with HTML, CSS, and JavaScript</footer>
+
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body")
+
+            body.classList.toggle("dark");
+        }
+    
+     let themeButton = document.querySelector(".theme-button");
+     themeButton.addEventListener("click", changeTheme);   
+    </script>
+</body>
+</html>
